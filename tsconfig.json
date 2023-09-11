@@ -19,7 +19,9 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
+
+    "jsxImportSource": "@emotion/react"
   },
   "include": [
     ".eslintrc.cjs",
