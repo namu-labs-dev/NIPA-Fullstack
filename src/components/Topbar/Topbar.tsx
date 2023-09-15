@@ -1,5 +1,4 @@
 import { ConfigProvider } from "antd";
-import { TopHeader } from "./Topbar.css";
 import {
   MenuOutlined,
   SearchOutlined,
