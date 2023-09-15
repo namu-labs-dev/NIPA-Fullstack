@@ -4,7 +4,7 @@ import { Topbar } from "./Topbar";
 import avatar from "@public/Assets/Images/Avatar.png";
 
 const meta = {
-  title: "Topbar",
+  title: "Local/Topbar",
   component: Topbar,
   parameters: {
     layout: "centered",
