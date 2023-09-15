@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+/*text style*/
+.h1-medium {
+  font-size: 38px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 46px;
+}
+.h1-bold {
+  font-size: 38px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 46px;
+}
+.h2-medium {
+  font-size: 30px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 40px;
+}
+.h2-bold {
+  font-size: 30px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 40px;
+}
+.h2-regular {
+  font-size: 30px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 40px;
+}
+.h3-medium {
+  font-size: 24px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 32px;
+}
+.h3-regular {
+  font-size: 24px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 32px;
+}
+.h3-bold {
+  font-size: 24px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 32px;
+}
+.h4-medium {
+  font-size: 20px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 28px;
+}
+.h4-bold {
+  font-size: 20px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 28px;
+}
+.h5-regular {
+  font-size: 18px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 24px;
+}
+.h5-medium {
+  font-size: 18px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 24px;
+}
+.h5-bold {
+  font-size: 18px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 24px;
+}
+.h6-medium {
+  font-size: 16px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 24px;
+}
+.h6-bold {
+  font-size: 16px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 24px;
+}
+.h6-regular {
+  font-size: 16px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 24px;
+}
+.body1-regular {
+  font-size: 16px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 26px;
+}
+.body1-medium {
+  font-size: 16px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 26px;
+}
+.body1-bold {
+  font-size: 16px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 26px;
+}
+.body1-regular-underline {
+  font-size: 16px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 26px;
+}
+.body1-regular-strikethrough {
+  font-size: 16px;
+  text-decoration: line-through;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 26px;
+}
+.body1-code {
+  font-size: 16px;
+  font-family: Menlo;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 26px;
+}
+.body2-regular {
+  font-size: 14px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 22px;
+}
+.body2-medium {
+  font-size: 14px;
+  font-family: Pretendard Variable;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 22px;
+}
+.body2-bold {
+  font-size: 14px;
+  font-family: Pretendard Variable;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 22px;
+}
+.body2-regular-underline {
+  font-size: 14px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 22px;
+}
+.body2-regular-strikethrough {
+  font-size: 14px;
+  text-decoration: line-through;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 22px;
+}
+.footnote-description {
+  font-size: 12px;
+  font-family: Pretendard Variable;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 20px;
+}
+.footnote-system-monospace {
+  font-size: 12px;
+  font-family: Roboto Mono;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 20px;
+}

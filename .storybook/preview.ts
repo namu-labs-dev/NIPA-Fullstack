@@ -1,10 +1,15 @@
-import type { Preview } from "@storybook/react";
-import React, { ReactElement } from "react";
-import { ConfigProvider } from "antd";
+import type { Preview } from '@storybook/react';
+import React, { ReactElement } from 'react';
+import { ConfigProvider } from 'antd';
+
+import { withThemeByClassName } from '@storybook/addon-styling';
+
+/* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
+import '../src/index.css';
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -18,13 +23,21 @@ export const decorators = [
   (Story) => {
     return React.createElement(ConfigProvider, {
       theme: {
-        "token": {
-          "colorSuccess": "#f6ffed",
-          "colorSuccessBg": "#389e0d"
-        }
+        token: {
+          colorSuccess: '#f6ffed',
+          colorSuccessBg: '#389e0d',
+        },
       },
       children: React.createElement(Story),
     });
-  },
+  }, // Adds theme switching support.
+  // NOTE: requires setting "darkMode" to "class" in your tailwind config
+  withThemeByClassName({
+    themes: {
+      light: 'light',
+      dark: 'dark',
+    },
+    defaultTheme: 'light',
+  }),
 ];
 export default preview;
