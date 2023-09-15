@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { SlotAdd } from "./Slotadd";
+import {SlotAdd} from "./Slotadd";
 
 const meta = {
   title: "Local/SlotAdd",
@@ -20,13 +20,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     type: "Primary",
-    label: "저작권등록",
-  },
-};
-
-export const Background: Story = {
-  args: {
-    type: "Background",
     label: "저작권등록",
   },
 };
