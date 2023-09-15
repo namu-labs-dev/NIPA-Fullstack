@@ -1,47 +1,59 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Topbar } from './Topbar';
+import avatar from '@public/Assets/Images/Avatar.png';
 
-import { Topbar } from "./Topbar";
-import avatar from "@public/Assets/Images/Avatar.png";
-
-const meta = {
-  title: "Local/Topbar",
+const meta: Meta = {
+  title: 'Local/Topbar',
   component: Topbar,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    // title: "여기",
+    type: {
+      control: {
+        type: 'select',
+        options: ['Primary', 'Search', 'Back'],
+      },
+    },
   },
-} satisfies Meta<typeof Topbar>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Topbar>;
 
 export const Primary: Story = {
   args: {
-    type: "Primary",
-    title: "Title goes here",
+    type: 'Primary',
+    title: 'Primary Topbar',
+    onClickLeft: () => console.log('Left button clicked!'),
+    onClickRight: () => console.log('Right button clicked!'),
   },
 };
 
 export const Search: Story = {
   args: {
-    type: "Search",
-    title: "Title goes here",
+    type: 'Search',
+    title: 'Search Title',
+    onClickLeft: () => console.log('Left button clicked!'),
+    onClickRight: () => console.log('Right button clicked!'),
   },
 };
 
 export const Back: Story = {
   args: {
-    type: "Back",
-    title: "Title goes here",
+    type: 'Back',
+    title: 'Back Title',
+    onClickLeft: () => console.log('Left button clicked!'),
+    onClickRight: () => console.log('Right button clicked!'),
   },
 };
 
-export const BackProfile: Story = {
+export const Profile: Story = {
   args: {
-    type: "Back",
+    type: 'Primary',
     title: avatar,
+    onClickLeft: () => console.log('Left button clicked!'),
+    onClickRight: () => console.log('Right button clicked!'),
   },
 };
