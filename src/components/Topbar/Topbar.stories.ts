@@ -41,7 +41,7 @@ export const Back: Story = {
 
 export const BackProfile: Story = {
   args: {
-    type: "BackProfile",
+    type: "Back",
     title: avatar,
   },
 };
