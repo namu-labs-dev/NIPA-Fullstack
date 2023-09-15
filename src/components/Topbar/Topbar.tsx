@@ -10,8 +10,8 @@ import Image, { StaticImageData } from "next/image";
 interface TopbarProps {
   type: "Primary" | "Search" | "Back";
   title: string | StaticImageData;
-  onLeftClick: () => void;
-  onRightClick: () => void;
+  onClickLeft: () => void;
+  onClickRight: () => void;
 }
 
 export const Topbar = (props: TopbarProps) => {
