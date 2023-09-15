@@ -1,45 +1,74 @@
 import { ConfigProvider } from "antd";
 import { TopHeader } from "./Topbar.css";
-import menu from '../../../public/Assets/Images/menu.svg'
-import search from '../../../public/Assets/Images/search.svg'
-import bell from '../../../public/Assets/Images/bell.svg'
-import left from '../../../public/Assets/Images/left.svg'
-import avtar from '../../../public/Assets/Images/Avatar.png'
-import Image from "next/image";
+import {
+  MenuOutlined,
+  SearchOutlined,
+  BellOutlined,
+  LeftOutlined,
+} from "@ant-design/icons";
+import Image, { StaticImageData } from "next/image";
 
 interface TopbarProps {
+  type: "Primary" | "Search" | "Back" | "BackProfile";
+  title: string | StaticImageData;
+  onLeftClick: () => void;
+  onRightClick: () => void;
 }
 
-export const Topbar = ({ ...props }: TopbarProps) => {
+export const Topbar = (props: TopbarProps) => {
   return (
     <ConfigProvider
       theme={{
-        "token": {
-          "borderRadius": 2,
-        }
-    }}
-  >
-    <TopHeader>
-      <div className="navigation">
-        <Image src={menu} alt="menu" />
-        <h1>Title goes here</h1>
+        token: {
+          borderRadius: 2,
+        },
+      }}
+    >
+      <div className="w-mob flex h-14 items-center justify-between px-4 py-4">
+        {/* Left Button */}
+        {props.type === "Primary" && (
+          <MenuOutlined
+            style={{ fontSize: "24px" }}
+            onClick={props.onLeftClick}
+          />
+        )}
+        {props.type === "Search" && (
+          <SearchOutlined
+            style={{ fontSize: "24px" }}
+            onClick={props.onLeftClick}
+          />
+        )}
+        {(props.type === "Back" || props.type === "BackProfile") && (
+          <LeftOutlined
+            style={{ fontSize: "24px" }}
+            onClick={props.onLeftClick}
+          />
+        )}
+        {/* Center Title*/}
+        {typeof props.title === "string" ? (
+          <span className="text-Neutral-13 h4-bold">{props.title}</span>
+        ) : (
+          <Image alt="profile image" src={props.title as StaticImageData} />
+        )}
+        {/* Right Button */}
+        {props.type === "Primary" && <span className="w-6" />}
+        {props.type === "Search" && (
+          <BellOutlined
+            className="w-6"
+            style={{ fontSize: "24px" }}
+            onClick={props.onLeftClick}
+          />
+        )}
+        {(props.type === "Back" || props.type === "BackProfile") && (
+          <span
+            className=" text-DayBreakBlue-6 body1-medium w-6 "
+            style={{ direction: "rtl" }}
+            onClick={props.onLeftClick}
+          >
+            Option
+          </span>
+        )}
       </div>
-      <div className="navigation-second">
-        <Image src={search} alt="search" />
-        <h1>Title goes here</h1>
-        <Image src={bell} alt="bell" />
-      </div>
-      <div className="navigation-second">
-        <Image src={left} alt="search" />
-        <h1>Title goes here</h1>
-        <button>Option</button>
-      </div>
-      <div className="navigation-second">
-        <Image src={left} alt="search" />
-        <Image src={avtar} alt="avtar" />
-        <button>Option</button>
-      </div>
-    </TopHeader>
     </ConfigProvider>
   );
 };
