@@ -28,19 +28,19 @@ export const Topbar = (props: TopbarProps) => {
         {props.type === "Primary" && (
           <MenuOutlined
             style={{ fontSize: "24px" }}
-            onClick={props.onLeftClick}
+            onClick={props.onClickLeft}
           />
         )}
         {props.type === "Search" && (
           <SearchOutlined
             style={{ fontSize: "24px" }}
-            onClick={props.onLeftClick}
+            onClick={props.onClickLeft}
           />
         )}
         {props.type === "Back" && (
           <LeftOutlined
             style={{ fontSize: "24px" }}
-            onClick={props.onLeftClick}
+            onClick={props.onClickLeft}
           />
         )}
         {/* Center Title*/}
@@ -55,14 +55,14 @@ export const Topbar = (props: TopbarProps) => {
           <BellOutlined
             className="w-6"
             style={{ fontSize: "24px" }}
-            onClick={props.onLeftClick}
+            onClick={props.onClickRight}
           />
         )}
         {props.type === "Back" && (
           <span
             className=" text-DayBreakBlue-6 body1-medium w-6 "
             style={{ direction: "rtl" }}
-            onClick={props.onLeftClick}
+            onClick={props.onClickRight}
           >
             Option
           </span>
