@@ -9,7 +9,7 @@ import {
 import Image, { StaticImageData } from "next/image";
 
 interface TopbarProps {
-  type: "Primary" | "Search" | "Back" | "BackProfile";
+  type: "Primary" | "Search" | "Back";
   title: string | StaticImageData;
   onLeftClick: () => void;
   onRightClick: () => void;
@@ -38,7 +38,7 @@ export const Topbar = (props: TopbarProps) => {
             onClick={props.onLeftClick}
           />
         )}
-        {(props.type === "Back" || props.type === "BackProfile") && (
+        {props.type === "Back" && (
           <LeftOutlined
             style={{ fontSize: "24px" }}
             onClick={props.onLeftClick}
@@ -59,7 +59,7 @@ export const Topbar = (props: TopbarProps) => {
             onClick={props.onLeftClick}
           />
         )}
-        {(props.type === "Back" || props.type === "BackProfile") && (
+        {props.type === "Back" && (
           <span
             className=" text-DayBreakBlue-6 body1-medium w-6 "
             style={{ direction: "rtl" }}
