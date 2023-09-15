@@ -1,25 +1,32 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Slotadd } from './Slotadd';
+import { SlotAdd } from "./Slotadd";
 
 const meta = {
-  title: "Slotadd",
-  component: Slotadd,
+  title: "Local/SlotAdd",
+  component: SlotAdd,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
-    backgroundColor: { control: "color" },
+    // title: "여기",
   },
-} satisfies Meta<typeof Slotadd>;
+} satisfies Meta<typeof SlotAdd>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: "Slotadd",
+    type: "Primary",
+    label: "저작권등록",
+  },
+};
+
+export const Background: Story = {
+  args: {
+    type: "Background",
+    label: "저작권등록",
   },
 };

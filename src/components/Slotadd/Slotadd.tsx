@@ -1,31 +1,28 @@
 import { ConfigProvider } from "antd";
-import plus from '../../../public/Assets/Images/plus-circle.svg'
-import Image from "next/image";
-import { SlotAddStyle } from "./Slotadd.css";
+import {
+  PlusCircleFilled,
+} from "@ant-design/icons";
 
-interface SlotaddProps {
+interface SlotAddProps {
+  type: "Primary" | "Background";
+  label: string;
 }
 
-export const Slotadd = ({ ...props }: SlotaddProps) => {
+export const SlotAdd = (props: SlotAddProps) => {
   return (
     <ConfigProvider
       theme={{
-        "token": {
-          "borderRadius": 2,
-
-        }
-    }}
-  >
-    <SlotAddStyle>
-    <div className="slot-main">
-        <Image src={plus} alt="plus-circle" />
-        <p>저작권등록</p>
-    </div>
-    <div className="slot-main slot-second">
-        <Image src={plus} alt="plus-circle" />
-        <p>저작권등록</p>
-    </div>
-    </SlotAddStyle>
+        token: {
+          borderRadius: 2,
+        },
+      }}
+    >
+      <div className={`flex justify-center items-center p-[58px_48px_58px_48px] ${props.type === "Primary" ? "bg-[#FAFAFA]" : props.type === "Background" ? "bg-[#F6FFED]" : ""}`}>
+        <div className="flex flex-col items-center">
+          <PlusCircleFilled style={{ color: "#52C41A", fontSize: "36px" }} />
+          <h1 className="text-[#389E0D] mt-1">{props.label}</h1>
+        </div>
+      </div>
     </ConfigProvider>
   );
 };
